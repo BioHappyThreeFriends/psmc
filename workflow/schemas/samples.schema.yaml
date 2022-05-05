@@ -1,0 +1,25 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+description: row of the samples.tsv, representing a sequencing unit, i.e. single-end or paired-end data
+type: object
+properties:
+  sample_id:
+    type: string
+    description: sample name/id, would be used in file naming for convenience of results interpretation
+  fasta:
+    type: string
+    description: 
+  fasta_fai:
+    type: string
+    description: 
+  coverage:
+    type: string
+    description: 
+  bam:
+    type: string
+    description: 
+  bai:
+    type: string
+    description: 
+required:
+  - sample_id
+  - fasta

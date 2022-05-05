@@ -1,0 +1,65 @@
+#---- Dirs ----
+# input dirs
+samples: "data_input/samples.tsv"
+psmc_tool_dir: "/home/aliya/bioinf/tools/psmc/"
+
+# output dirs
+alignment_dir: "data_output/alignment"
+assembly_stats_dir: "data_output/assembly_stats"
+variant_calling_dir: "data_output/variant_calling"
+fastq_dir: "data_output/fastq"
+psmc_dir: "data_output/psmc"
+plots_dir: "data_output/plots"
+
+# technical dirs
+scripts_dir: "workflow/scripts"
+
+# log dirs
+log_dir: "logs"
+cluster_log_dir: "cluster_logs"
+benchmark_dir: "benchmarks"
+
+# config
+conda_config: "workflow/envs/conda.yaml"
+
+# parameters
+min_mapping_quality: 20
+# visualization
+generation_time: 10
+mutation_rate: 2.5^e10
+d: 4
+D: 41
+
+#---- Threads ----
+# suppl
+pigz_threads: 5
+# rules
+mosdepth_threads: 16
+samtools_faidx_threads: 16
+variant_calling_threads: 16
+create_fastq_threads: 16
+fq_to_psmcfa_threads: 16
+psmc_threads: 16
+draw_psmc_one_sample_threads: 16
+
+
+#---- Time ----
+mosdepth_time: "10:00:00"
+samtools_faidx_time: "10:00:00"
+variant_calling_time: "10:00:00"
+create_fastq_time: "10:00:00"
+fq_to_psmcfa_time: "10:00:00"
+psmc_time: "10:00:00"
+draw_psmc_one_sample_time: "1:00:00"
+
+#---- Memory ----
+# suppl
+bwa_map_per_thread_mem_mb: 10
+# rules
+mosdepth_mem_mb: 50000
+samtools_faidx_mem_mb: 50000
+variant_calling_mem_mb: 50000
+create_fastq_mem_mb: 50000
+fq_to_psmcfa_mem_mb: 50000
+psmc_mem_mb: 50000
+draw_psmc_one_sample_mem_mb: 1000

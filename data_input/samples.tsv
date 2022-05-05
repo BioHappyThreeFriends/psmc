@@ -1,0 +1,2 @@
+sample_id	fasta	fasta_fai	coverage	bam	bai
+test_sample	data_input/test_assemblies/assembly1.fa		20	data_input/test_samples/assembly1.sample1.sorted.mkdup.bam	data_input/test_samples/assembly1.sample1.sorted.mkdup.bam.bai
